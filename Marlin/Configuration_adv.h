@@ -517,7 +517,7 @@
 //
 // For Z set the number of stepper drivers
 //
-#define NUM_Z_STEPPER_DRIVERS 1   // (1-4) Z options change based on how many
+#define NUM_Z_STEPPER_DRIVERS 2   // (1-4) Z options change based on how many
 
 #if NUM_Z_STEPPER_DRIVERS > 1
   //#define Z_MULTI_ENDSTOPS
@@ -1064,7 +1064,7 @@
    * If the machine reboots when resuming a print you may need to replace or
    * reformat the SD card. (Bad sectors delay startup triggering the watchdog.)
    */
-  //#define POWER_LOSS_RECOVERY
+  #define POWER_LOSS_RECOVERY
   #if ENABLED(POWER_LOSS_RECOVERY)
     #define PLR_ENABLED_DEFAULT   false // Power Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
     //#define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
@@ -2045,7 +2045,7 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT       725        // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT       536        // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS    16        // 0..256
     #define X_RSENSE          0.11
@@ -2061,7 +2061,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT       725
+    #define Y_CURRENT       536
     #define Y_CURRENT_HOME  Y_CURRENT
     #define Y_MICROSTEPS     16
     #define Y_RSENSE          0.11
@@ -2077,7 +2077,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       725
+    #define Z_CURRENT       536
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
@@ -2085,7 +2085,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      800
+    #define Z2_CURRENT      536
     #define Z2_CURRENT_HOME Z2_CURRENT
     #define Z2_MICROSTEPS    16
     #define Z2_RSENSE         0.11
@@ -2109,7 +2109,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      900
+    #define E0_CURRENT      638
     #define E0_MICROSTEPS   16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
