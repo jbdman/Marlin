@@ -39,14 +39,14 @@
 //
 // Steppers
 //
-#ifndef Z2_STEP_PIN
-  #define Z2_STEP_PIN                      P0_01
+#ifndef E1_STEP_PIN
+  #define E1_STEP_PIN                      P0_01
 #endif
-#ifndef Z2_DIR_PIN
-  #define Z2_DIR_PIN                       P0_00
+#ifndef E1_DIR_PIN
+  #define E1_DIR_PIN                       P0_00
 #endif
-#ifndef Z2_ENABLE_PIN
-  #define Z2_ENABLE_PIN                    P0_10
+#ifndef E1_ENABLE_PIN
+  #define E1_ENABLE_PIN                    P0_10
 #endif
 
 //
